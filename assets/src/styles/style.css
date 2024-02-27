@@ -82,8 +82,12 @@
   width: 80%;
   padding: 7px;
   padding-left: calc(1em + 18px);
-  transition: var(--transitionTiming);
+  transition: calc(var(--transitionTiming) * 2);
   font-size: var(--13px);
+  border: 0;
+  outline: none;
+  color: inherit;
+  border-radius: 7px;
 }
 @media screen and (min-width: 600px) {
   .menu__search .menu__search-input:focus {
@@ -247,6 +251,9 @@
   line-height: 1.4;
   letter-spacing: 1px;
 }
+.note__blog-details-special {
+  color: var(--color-light);
+}
 
 .addNote {
   display: none;
@@ -317,5 +324,5 @@
 }
 
 .highlight {
-  background-color: yellow; /* Change the background color to yellow */
+  background-color: #fcfc67;
 }/*# sourceMappingURL=style.css.map */

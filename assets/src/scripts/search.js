@@ -1,18 +1,23 @@
-const notesNameArray = document.querySelectorAll(".note__notes-noteItem-title");
-const searchInput = document.querySelector('#search');
+const handleSearch = () => {
+    const notesTitles = document.querySelectorAll('.note__notes-noteItem-title');
+    const searchInput = document.querySelector('#search');
 
-searchInput.addEventListener('input', () => {
-    const searchText = searchInput.value.trim().toLowerCase();
+    searchInput.addEventListener('input', () => {
+        const searchText = searchInput.value.trim().toLowerCase();
 
-    notesNameArray.forEach(notesName => {
-        const title = notesName.textContent.trim().toLowerCase();
+        notesTitles.forEach(titleElement => {
+            const title = titleElement.textContent.trim().toLowerCase();
+            const noteItem = titleElement.parentElement;
 
-        if (title.includes(searchText)) {
-            notesName.parentElement.classList.add('highlight'); // Add a CSS class to highlight the note
-            notesName.parentElement.style.display = 'block';
-        } else {
-            notesName.parentElement.classList.remove('highlight'); // Remove the CSS class if the note doesn't match the search query
-            notesName.parentElement.style.display = 'none';
-        }
+            if (searchText && title.includes(searchText)) {
+                noteItem.classList.add('highlight');
+            } else {
+                noteItem.classList.remove('highlight');
+            }
+            
+        });
     });
-});
+}
+
+// Call the function to handle search when the DOM is loaded
+document.addEventListener('input', handleSearch);
