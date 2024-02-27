@@ -10,8 +10,36 @@ This is a simple Notes App project built using HTML, CSS, and JavaScript (with s
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
+- [Contact](#contact)
 
 ## Screenshots
+
+### 1.Planning
+<div align="center">
+  <img src="Screenshots/planning-2.jpg" alt="planning 2" width="1000">
+</div>
+<div align="center">
+  <img src="Screenshots/planning-1.jpg" alt="planning 1" width="1000">
+</div>
+
+
+### 2.UI
+
+<div align="center">
+  <img src="Screenshots/💻Add Note.png" alt="planning 2" width="400">
+  <img src="Screenshots/💻Add Note.png" alt="planning 1" width="400">
+</div>
+
+### 3.Responsive
+<div align="center">
+  <img src="Screenshots/📱⚪️Home.jpg" alt="planning 2" width="400">
+  <img src="Screenshots/📱⚪Add Note.png" alt="planning 2" width="400">
+</div>
+<div align="center">
+  <img src="Screenshots/📱⚪️Menu.png" alt="planning 1" width="400">
+  <img src="Screenshots/📱⚪️Search.png" alt="planning 1" width="400">
+  <img src="Screenshots/📱⚪️Single Blog.jpg" alt="planning 1" width="400">
+</div>
 
 ## Features
 
@@ -53,3 +81,12 @@ Contributions are welcome! If you find any bugs or want to suggest improvements,
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
+## Contact
+
+- [Author](https://github.com/MMansy19)
+- [Website](https://mahmoud-mansy-portfolio.netlify.app/)
+- [Email](mailto:mahmoud2abdalfattah@gmail.com)
+- [LinkedIn](https://www.linkedin.com/in/mahmoud-mansy-a189a5232)
+
