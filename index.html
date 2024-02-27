@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/src/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aclonica&family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <title>Notes App</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="menu">
+        <h3 class="menu__title">Almdrasa-Notes</h3>
+        <div class="menu__search">
+          <div class="menu__search-icon">
+            <img src="assets\icons\search.svg" alt="search icon" />
+          </div>
+          <input
+            id="search"
+            type="text"
+            class="menu__search-input"
+            placeholder="Search..."
+            aria-label="search"
+          />
+        </div>
+        <nav class="menu__nav">
+          <div role="tab" class="menu__nav-item menu__nav-item-noteButton">
+            <span class="menu__nav-item-line"></span>
+            <button
+              id="noteButton"
+              class="menu__nav-item-link menu__nav-item-link-active"
+            >
+              Notes
+            </button>
+          </div>
+          <div class="menu__nav-item menu__nav-item-addNoteButton">
+            <span></span>
+            <button id="addNoteButton" class="menu__nav-item-link">
+              Add Note
+            </button>
+          </div>
+        </nav>
+      </section>
+      <section id="noteSection" class="note">
+        <div class="">
+          <div class="note__notes">
+            <h3 id="pinned" class="note__notes-title">
+              <span class="note__notes-title-text">PINNED</span>
+            </h3>
+
+            <h3 id="normal" class="note__notes-title note__notes-title-notes">
+              <span class="note__notes-title-text">Notes</span>
+            </h3>
+          </div>
+          <div class="note__blog">
+            <h2 class="note__blog-title">
+              Business Partners Work at Modern Office
+            </h2>
+            <span class="note__blog-auther"
+              >Feb 8, 2021 / By Mahmoud Mansy</span
+            >
+            <p class="note__blog-details">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet. mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+              <br />
+              <br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at
+              arcu dui. Lorem ipsum dolor sit amet, consectetur adipisce
+              placerat mauris nisl. Proin vitae urna eu sem pellentesque
+              laoreet.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="addNoteSection" class="addNote">
+        <h1 class="addNote__title">Add Note</h1>
+        <form class="addNote__form">
+          <div class="addNote__form-item">
+            <label class="addNote__form-item-label">Title*</label>
+            <input id="title" type="text" class="addNote__form-item-input" />
+          </div>
+          <div class="addNote__form-item">
+            <label class="addNote__form-item-label">Author*</label>
+            <input id="auther" type="text" class="addNote__form-item-input" />
+          </div>
+          <div class="addNote__form-item">
+            <label class="addNote__form-item-label">Your Note*</label>
+            <textarea
+              id="details"
+              class="addNote__form-item-input addNote__form-item-input-note"
+            ></textarea>
+          </div>
+        </form>
+        <div class="addNote__buttons">
+          <button id="normalNote" class="addNote__buttons-add">Add Note</button>
+          <button id="pinnedNote" class="addNote__buttons-add">
+            Add pinned note
+          </button>
+        </div>
+      </section>
+    </div>
+    <script src="assets/src/scripts/handleToggle.js"></script>
+    <script src="assets/src/scripts/addNote.js"></script>
+    <script src="assets/src/scripts/handleNote.js"></script>
+    <script src="assets/src/scripts/search.js"></script>
+  </body>
+</html>
