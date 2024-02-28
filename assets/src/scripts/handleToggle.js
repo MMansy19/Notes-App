@@ -1,8 +1,8 @@
 // show
-const addNoteSection = document.querySelector("#addNoteSection");
-const noteSection = document.querySelector("#noteSection");
-const addNoteButton = document.querySelector(".menu__nav-item-addNoteButton");
-const noteButton = document.querySelector(".menu__nav-item-noteButton");
+export const noteSection = document.querySelector("#noteSection");
+export const addNoteSection = document.querySelector("#addNoteSection");
+export const addNoteButton = document.querySelector(".menu__nav-item-addNoteButton");
+export const noteButton = document.querySelector(".menu__nav-item-noteButton");
 const handleAddNoteSection = ()=>{
     noteSection.style.display = "none"
     addNoteSection.style.display = "flex"
