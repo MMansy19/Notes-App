@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="container">
+      <img class="burgerBar" src="assets\icons\Menu.svg"></img>
       <section class="menu">
         <h3 class="menu__title">Almdrasa-Notes</h3>
         <div class="menu__search">
@@ -49,40 +50,19 @@
       <section id="noteSection" class="note">
         <div class="">
           <div class="note__notes">
+            <img
+              class="note__notes-image"
+              src="assets\icons\Ellipse 2.svg"
+              alt="Ellipse 2"
+              width="28px"
+            />
             <h3 id="pinned" class="note__notes-title">
               <span class="note__notes-title-text">PINNED</span>
             </h3>
-            <div class="note__notes-noteItem">
-              <h2 class="note__notes-noteItem-title">
-                👨‍💻 Experienced Frontend Developer (React.js)
-              </h2>
-              <p class="note__notes-noteItem-details">
-                Hello there! I am a dedicated Frontend developer currently
-                pursuing my degree in Biomedical Engineering at Cairo
-                University...
-              </p>
-              <div class="note__notes-noteItem-last">
-                <span class="note__notes-noteItem-last-date">Feb 28, 2024</span>
-                <button class="note__notes-noteItem-last-delete">Delete</button>
-              </div>
-            </div>
+
             <h3 id="normal" class="note__notes-title note__notes-title-notes">
               <span class="note__notes-title-text">Notes</span>
             </h3>
-            <div class="note__notes-noteItem">
-              <h2 class="note__notes-noteItem-title">
-                🎯 ToDoList Project App
-              </h2>
-              <p class="note__notes-noteItem-details">
-                Presenting a meticulously crafted React TodoList: a proficient
-                task management tool enabling seamless task creation, updates,
-                and deletion...
-              </p>
-              <div class="note__notes-noteItem-last">
-                <span class="note__notes-noteItem-last-date">Feb 28, 2024</span>
-                <button class="note__notes-noteItem-last-delete">Delete</button>
-              </div>
-            </div>
           </div>
           <div class="note__blog">
             <h2 class="note__blog-title">
@@ -179,8 +159,10 @@
       </section>
     </div>
     <script src="assets/src/scripts/handleToggle.js"></script>
-    <script src="assets/src/scripts/addNote.js"></script>
+    <script type="module" src="assets/src/scripts/addInitialNotes.js"></script>
+    <script type="module" src="assets/src/scripts/addNote.js"></script>
     <script src="assets/src/scripts/handleNote.js"></script>
+    <script src="assets/src/scripts/handleNotesSidebar.js"></script>
     <script src="assets/src/scripts/search.js"></script>
   </body>
 </html>
