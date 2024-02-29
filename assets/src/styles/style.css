@@ -90,13 +90,6 @@ html {
   padding: 0 24px 0;
   transition: calc(var(--transitionTiming) * 10);
 }
-@media (max-width: 900px) {
-  .menu {
-    width: 100%;
-    z-index: 11;
-    transition: calc(var(--transitionTiming) * 10);
-  }
-}
 .menu__title {
   margin-top: 41px;
   position: relative;
@@ -188,6 +181,11 @@ html {
 }
 .menu__nav-item:hover .menu__nav-item-link {
   color: var(--color-black);
+}
+
+.mobileMenu {
+  width: 100%;
+  z-index: 1;
 }
 
 .responsiveMenu {
@@ -300,9 +298,15 @@ html {
   overflow-y: auto;
   transition: var(--transitionTiming-large);
   margin: 0 auto;
-  padding: 100px 50px 99px;
 }
-@media (min-width: 1200px) {
+@media (max-width: 900px) {
+  .note__blog {
+    padding: 100px 20px;
+    --width-sideBar: 200px;
+    left: calc(var(--width-menu) + 100px);
+  }
+}
+@media (min-width: 900px) {
   .note__blog {
     padding: 100px 50px 99px;
   }
@@ -411,4 +415,10 @@ html {
 
 .highlight {
   background-color: #fcfc67;
+}
+
+.responsiveBlog {
+  margin: 0 auto;
+  position: relative;
+  left: 50px;
 }/*# sourceMappingURL=style.css.map */
