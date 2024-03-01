@@ -1,5 +1,5 @@
 const blogShown = document.querySelector(".note__blog");
-const notesArray = document.querySelectorAll(".note__notes-noteItem");
+const notesSideBar = document.querySelector(".note__notes");
 
 document.addEventListener("click", (event) => {
     if (event.target.classList.contains('note__notes-noteItem-last-delete')) {
@@ -40,7 +40,16 @@ document.addEventListener("click", (event) => {
 
         // Set the inner HTML of blogShown to the generated blog content
         blogShown.innerHTML = blog;
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            blogShown.style.display = 'block';
+            notesSideBar.style.display = 'none';
+        }        
+    }
+    else if(event.target.classList.contains('burgerBar')){
+        if (window.matchMedia("(max-width: 600px)").matches) {
+
+        blogShown.style.display = 'none';
+        notesSideBar.style.display = 'flex';
+            }        
     }
 });
-
-

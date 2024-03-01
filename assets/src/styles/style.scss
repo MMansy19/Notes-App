@@ -6,10 +6,10 @@
   --color-black: #303030;
   --color-gray: #898989;
   --color-gap: #e7e7e9;
-  --13px: 1.3rem;
-  --15px: 1.5rem;
-  --16px: 1.6rem;
-  --26px: 2.6rem;
+  --13px: 13px;
+  --15px: 15px;
+  --16px: 16px;
+  --26px: 26px;
   --transitionTiming: 0.1s;
   --transitionTiming-large: 1s;
   --width-sideBar: 322px;
@@ -70,6 +70,72 @@ html {
     display: block;
   }
 }
+.searchIcon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+  transition: var(--transitionTiming-large);
+  @media screen and (max-width: 900px) {
+    display: block;
+  }
+}
+
+.menu__title {
+  margin: 41px 0 0 24px;
+  position: relative;
+  z-index: 2;
+  font-family: "Aclonica", sans-serif;
+  color: var(--color-light);
+  font-size: var(--15px);
+  @media screen and (max-width: 1200px) {
+    margin: 17px 0 0 75px;
+  }
+}
+
+.menu__search {
+  position: relative;
+  margin-top: 50px;
+  margin-left: 25px;
+  border-radius: 0;
+  width: calc(var(--width-menu) * 0.8);
+  z-index: 2;
+  @media screen and (max-width: 900px) {
+    margin-top: 0;
+    transform: translateY(-20rem);
+    transition: calc(var(--transitionTiming) * 10);
+  }
+  &-icon {
+    cursor: pointer;
+    padding: 8px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-input {
+    color: inherit;
+    border: none;
+    width: 80%;
+    padding: 7px;
+    padding-left: calc(1em + 18px);
+    transition: calc(var(--transitionTiming) * 2);
+    font-size: var(--13px);
+    border: 0;
+    outline: none;
+    color: inherit;
+    border-radius: 7px;
+  }
+
+  @media screen and (min-width: 600px) {
+    .menu__search-input:focus {
+      width: 100%;
+    }
+  }
+}
 .menu {
   position: fixed;
   display: flex;
@@ -80,55 +146,14 @@ html {
   padding: 0 24px 0;
   transition: calc(var(--transitionTiming) * 10);
 
-  &__title {
-    margin-top: 41px;
-    position: relative;
-    font-family: "Aclonica", sans-serif;
-    color: var(--color-light);
-    font-size: var(--15px);
-    @media screen and (max-width: 1200px) {
-      margin: 17px auto 0;
-    }
-  }
-  &__search {
-    position: relative;
-    margin-top: 57px;
-    border-radius: 0;
-
-    &-icon {
-      cursor: pointer;
-      padding: 8px;
-      height: 100%;
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    &-input {
-      color: inherit;
-      border: none;
-      width: 80%;
-      padding: 7px;
-      padding-left: calc(1em + 18px);
-      transition: calc(var(--transitionTiming) * 2);
-      font-size: var(--13px);
-      border: 0;
-      outline: none;
-      color: inherit;
-      border-radius: 7px;
-    }
-
-    @media screen and (min-width: 600px) {
-      .menu__search-input:focus {
-        width: 100%;
-      }
-    }
-  }
   &__nav {
     display: flex;
     flex-direction: column;
-    margin-top: 35px;
+    margin-top: 185px;
+    @media screen and (max-width: 900px) {
+      margin-top: 80px;
+    }
+    transition: calc(var(--transitionTiming) * 10);
     font-size: var(--16px);
 
     &-item {
@@ -203,15 +228,26 @@ html {
     padding: 48px 0;
     font-size: var(--13px);
     overflow-y: auto; /* Enable vertical scrolling */
+    @media (max-width: 600px) {
+      width: 100%;
+      padding: 48px 20px;
+    }
+
     &-image {
       position: fixed;
       margin-left: calc(var(--width-sideBar) - 18px);
       transition: calc(var(--transitionTiming) * 15);
       margin-top: 50px;
+      @media (max-width: 600px) {
+        display: none;
+      }
     }
     &-title {
       margin-bottom: 16px;
       color: var(--color-light);
+      @media (max-width: 600px) {
+        margin-top: 55px;
+      }
       &-text {
         margin-left: 28px;
       }
@@ -296,11 +332,20 @@ html {
     overflow-y: auto;
     transition: var(--transitionTiming-large);
     margin: 0 auto;
-
-    @media (max-width: 900px) {
-      padding: 100px 20px;
-      --width-sideBar: 200px;
-      left: calc(var(--width-menu) + 100px);
+    @media (max-width: 600px) {
+      display: none;
+      position: relative;
+      left: 0;
+      margin: 10rem auto;
+      position: relative;
+      padding: 0 2rem;
+    }
+    @media ((min-width: 600px)) {
+      @media ((max-width: 900px)) {
+        padding: 100px 20px;
+        --width-sideBar: 200px;
+        left: calc(var(--width-menu) + 100px);
+      }
     }
     @media (min-width: 900px) {
       padding: 100px 50px 99px;
@@ -339,11 +384,18 @@ html {
   @media (max-width: 1000px) {
     margin: 0 auto;
     position: relative;
+    top: 114px;
   }
-  top: 114px;
+  @media (max-width: 600px) {
+    margin: 10rem auto;
+    position: relative;
+    padding: 0 2rem;
+    top: 0;
+    left: 0;
+  }
   &__title {
     font-size: var(--26px);
-    margin-bottom: 36px;
+    margin-bottom: 3.6rem;
     color: var(--color-black);
   }
   &__form {
@@ -364,7 +416,12 @@ html {
       &-input {
         border: 0;
         outline: none;
-        width: 500px;
+        @media (min-width: 400px) {
+          width: 50rem;
+        }
+        @media (max-width: 400px) {
+          width: 35rem;
+        }
         background: var(--color-menu);
         padding: 10px 7px;
         color: inherit;
@@ -381,8 +438,12 @@ html {
   }
   &__buttons {
     display: flex;
-    gap: 27px;
-    margin-top: 48px;
+    gap: 2.7rem;
+    margin-top: 4.8rem;
+    @media (max-width: 400px) {
+      align-items: center;
+      justify-content: center;
+    }
 
     &-add {
       background-color: var(--color-light);
@@ -409,4 +470,16 @@ html {
   margin: 0 auto;
   position: relative;
   left: 50px;
+}
+.responsiveSearchInput {
+  display: block;
+  margin: 10px auto 0;
+  transition: calc(var(--transitionTiming) * 10);
+  width: 80%;
+  transform: translateY(0rem);
+}
+.responsiveMenuColor {
+  height: 80px;
+  background: var(--color-menu);
+  transition: calc(var(--transitionTiming) * 10);
 }

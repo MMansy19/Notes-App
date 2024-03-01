@@ -1,7 +1,10 @@
-import {addNoteButton, noteButton, addNoteSection,} from "./handleToggle.js"
+import {addNoteButton, noteButton} from "./handleToggle.js"
+export const burgerBar = document.querySelector(".burgerBar");
 const icon = document.querySelector(".note__notes-image");
-const burgerBar = document.querySelector(".burgerBar");
+const container = document.querySelector(".container");
 const menu = document.querySelector(".menu");
+const searchIcon = document.querySelector(".searchIcon");
+const searchInput = document.querySelector(".menu__search");
 const notes = document.querySelector(".note");
 const notesSideBar = document.querySelector(".note__notes");
 const blog = document.querySelector(".note__blog");
@@ -29,6 +32,11 @@ const handleIconClicked = () => {
         }
     }
 };
+
+const handleSearchIcon = ()=>{
+    searchInput.classList.toggle("responsiveSearchInput")
+    container.classList.toggle("responsiveMenuColor");
+}
 const handleBurgerBarClickedForMobile = () => {
     (menu.style.getPropertyValue('--width-menu') === '0') ? menu.style.setProperty('--width-menu', '258px') : menu.style.setProperty('--width-menu', '0');
     notes.style.left=menu.style.getPropertyValue('--width-menu');
@@ -58,6 +66,7 @@ const handleBurgerBarClicked = () => {
 icon.addEventListener("click", handleIconClicked);
 
 burgerBar.addEventListener("click", handleBurgerBarClickedForMobile);
+searchIcon.addEventListener("click", handleSearchIcon);
 
 if (window.matchMedia("(max-width: 1200px)").matches) {
     handleBurgerBarClicked()

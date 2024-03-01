@@ -6,10 +6,10 @@
   --color-black: #303030;
   --color-gray: #898989;
   --color-gap: #e7e7e9;
-  --13px: 1.3rem;
-  --15px: 1.5rem;
-  --16px: 1.6rem;
-  --26px: 2.6rem;
+  --13px: 13px;
+  --15px: 15px;
+  --16px: 16px;
+  --26px: 26px;
   --transitionTiming: 0.1s;
   --transitionTiming-large: 1s;
   --width-sideBar: 322px;
@@ -80,32 +80,48 @@ html {
   }
 }
 
-.menu {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  width: var(--width-menu);
-  height: 100%;
-  background: var(--color-menu);
-  padding: 0 24px 0;
-  transition: calc(var(--transitionTiming) * 10);
+.searchIcon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+  transition: var(--transitionTiming-large);
 }
+@media screen and (max-width: 900px) {
+  .searchIcon {
+    display: block;
+  }
+}
+
 .menu__title {
-  margin-top: 41px;
+  margin: 41px 0 0 24px;
   position: relative;
+  z-index: 2;
   font-family: "Aclonica", sans-serif;
   color: var(--color-light);
   font-size: var(--15px);
 }
 @media screen and (max-width: 1200px) {
   .menu__title {
-    margin: 17px auto 0;
+    margin: 17px 0 0 75px;
   }
 }
+
 .menu__search {
   position: relative;
-  margin-top: 57px;
+  margin-top: 50px;
+  margin-left: 25px;
   border-radius: 0;
+  width: calc(var(--width-menu) * 0.8);
+  z-index: 2;
+}
+@media screen and (max-width: 900px) {
+  .menu__search {
+    margin-top: 0;
+    transform: translateY(-20rem);
+    transition: calc(var(--transitionTiming) * 10);
+  }
 }
 .menu__search-icon {
   cursor: pointer;
@@ -134,11 +150,28 @@ html {
     width: 100%;
   }
 }
+
+.menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: var(--width-menu);
+  height: 100%;
+  background: var(--color-menu);
+  padding: 0 24px 0;
+  transition: calc(var(--transitionTiming) * 10);
+}
 .menu__nav {
   display: flex;
   flex-direction: column;
-  margin-top: 35px;
+  margin-top: 185px;
+  transition: calc(var(--transitionTiming) * 10);
   font-size: var(--16px);
+}
+@media screen and (max-width: 900px) {
+  .menu__nav {
+    margin-top: 80px;
+  }
 }
 .menu__nav-item {
   display: flex;
@@ -213,15 +246,31 @@ html {
   font-size: var(--13px);
   overflow-y: auto; /* Enable vertical scrolling */
 }
+@media (max-width: 600px) {
+  .note__notes {
+    width: 100%;
+    padding: 48px 20px;
+  }
+}
 .note__notes-image {
   position: fixed;
   margin-left: calc(var(--width-sideBar) - 18px);
   transition: calc(var(--transitionTiming) * 15);
   margin-top: 50px;
 }
+@media (max-width: 600px) {
+  .note__notes-image {
+    display: none;
+  }
+}
 .note__notes-title {
   margin-bottom: 16px;
   color: var(--color-light);
+}
+@media (max-width: 600px) {
+  .note__notes-title {
+    margin-top: 55px;
+  }
 }
 .note__notes-title-text {
   margin-left: 28px;
@@ -299,7 +348,17 @@ html {
   transition: var(--transitionTiming-large);
   margin: 0 auto;
 }
-@media (max-width: 900px) {
+@media (max-width: 600px) {
+  .note__blog {
+    display: none;
+    position: relative;
+    left: 0;
+    margin: 10rem auto;
+    position: relative;
+    padding: 0 2rem;
+  }
+}
+@media ((min-width: 600px)) and ((max-width: 900px)) {
   .note__blog {
     padding: 100px 20px;
     --width-sideBar: 200px;
@@ -340,7 +399,6 @@ html {
   justify-content: center;
   flex-direction: column;
   position: fixed;
-  top: 114px;
 }
 @media (min-width: 1000px) {
   .addNote {
@@ -351,11 +409,21 @@ html {
   .addNote {
     margin: 0 auto;
     position: relative;
+    top: 114px;
+  }
+}
+@media (max-width: 600px) {
+  .addNote {
+    margin: 10rem auto;
+    position: relative;
+    padding: 0 2rem;
+    top: 0;
+    left: 0;
   }
 }
 .addNote__title {
   font-size: var(--26px);
-  margin-bottom: 36px;
+  margin-bottom: 3.6rem;
   color: var(--color-black);
 }
 .addNote__form {
@@ -378,12 +446,21 @@ html {
 .addNote__form-item-input {
   border: 0;
   outline: none;
-  width: 500px;
   background: var(--color-menu);
   padding: 10px 7px;
   color: inherit;
   border-radius: 7px;
   transition: var(--transitionTiming);
+}
+@media (min-width: 400px) {
+  .addNote__form-item-input {
+    width: 50rem;
+  }
+}
+@media (max-width: 400px) {
+  .addNote__form-item-input {
+    width: 35rem;
+  }
 }
 .addNote__form-item-input-note {
   min-height: 150px;
@@ -393,8 +470,14 @@ html {
 }
 .addNote__buttons {
   display: flex;
-  gap: 27px;
-  margin-top: 48px;
+  gap: 2.7rem;
+  margin-top: 4.8rem;
+}
+@media (max-width: 400px) {
+  .addNote__buttons {
+    align-items: center;
+    justify-content: center;
+  }
 }
 .addNote__buttons-add {
   background-color: var(--color-light);
@@ -421,4 +504,18 @@ html {
   margin: 0 auto;
   position: relative;
   left: 50px;
+}
+
+.responsiveSearchInput {
+  display: block;
+  margin: 10px auto 0;
+  transition: calc(var(--transitionTiming) * 10);
+  width: 80%;
+  transform: translateY(0rem);
+}
+
+.responsiveMenuColor {
+  height: 80px;
+  background: var(--color-menu);
+  transition: calc(var(--transitionTiming) * 10);
 }/*# sourceMappingURL=style.css.map */
