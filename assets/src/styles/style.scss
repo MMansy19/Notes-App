@@ -378,13 +378,13 @@ html {
   justify-content: center;
   flex-direction: column;
   position: fixed;
+  top: 114px;
   @media (min-width: 1000px) {
     left: 500px;
   }
   @media (max-width: 1000px) {
     margin: 0 auto;
     position: relative;
-    top: 114px;
   }
   @media (max-width: 600px) {
     margin: 10rem auto;
