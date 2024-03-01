@@ -2,6 +2,7 @@
 
 This is a simple Notes App project built using HTML, CSS, and JavaScript (with some parts written in SASS for improved styling). The application allows users to add, delete, search, and highlight notes.
 
+## [Live Site](https://note-app-mansy.netlify.app)
 ## Table of Contents
 
 - [Screenshots](#screenshots)
