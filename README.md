@@ -32,7 +32,7 @@ This is a simple Notes App project built using HTML, CSS, and JavaScript (with s
 ### 2.UI
 
 <div align="center">
-  <img src="Screenshots/💻Add Note.png" alt="planning 2" width="400">
+  <img src="Screenshots//💻⚪️Home.jpg" alt="planning 2" width="400">
   <img src="Screenshots/💻Add Note.png" alt="planning 1" width="400">
 </div>
 
